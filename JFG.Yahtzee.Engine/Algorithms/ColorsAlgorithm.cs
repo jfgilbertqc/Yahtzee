@@ -5,7 +5,7 @@ using JFG.Yahtzee.Engine.GameElements;
 namespace JFG.Yahtzee.Engine.Algorithms {
     internal class ColorsAlgorithm : ICalculationAlgorithm {
 
-        private const int ColorValue = 40;
+        private const int ColorPoints = 40;
 
         public ColorsAlgorithm(DieColor color, int numberOfTimes) {
             Color = color;
@@ -22,7 +22,7 @@ namespace JFG.Yahtzee.Engine.Algorithms {
             var ofAColor = numberOfOccurences.ToList().Find(occurences => occurences.Count == NumberOfTimes);
 
             if (ofAColor != null && ofAColor.Key == Color)
-                return ColorValue;
+                return ColorPoints;
 
             return 0;
         }
